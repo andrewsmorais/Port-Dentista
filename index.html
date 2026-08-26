@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VistaDent - Odontologia Integrada</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons (Modern & Clean Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2B3E60',
+                        primaryHover: '#182238',
+                        secondary: '#4A8BE8',
+                        accent: '#60A5FA',
+                        bodyBg: '#F2F5F9',
+                        cardBg: '#FFFFFF',
+                        textMain: '#1E293B',
+                        textMuted: '#64748B',
+                        borderLight: 'rgba(226, 232, 240, 0.8)',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.04)',
+                        'floating': '0 20px 40px -15px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Utilities */
+        body { background-color: #F2F5F9; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .smooth-transition { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="font-sans text-textMain antialiased relative selection:bg-secondary selection:text-white pb-10">
+
+    <!-- Header -->
+    <header class="container mx-auto px-4 lg:px-8 pt-6 pb-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-white text-secondary flex items-center justify-center shadow-sm border border-borderLight group-hover:shadow-md smooth-transition">
+                <i class="ph ph-tooth text-2xl"></i>
+            </div>
+            <span class="font-sans font-bold text-xl tracking-tight text-primary">VistaDent</span>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-textMuted">
+            <a href="#" class="hover:text-primary smooth-transition">A Clínica</a>
+            <a href="#" class="hover:text-primary smooth-transition">Serviços</a>
+            <a href="#" class="hover:text-primary smooth-transition">Equipe</a>
+            <a href="#" class="hover:text-primary smooth-transition">Preços</a>
+            <a href="#" class="hover:text-primary smooth-transition">Ofertas</a>
+            <a href="#" class="hover:text-primary smooth-transition">Contato</a>
+        </nav>
+        
+        <!-- CTA -->
+        <div class="hidden md:block">
+            <a href="#" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-primaryHover hover:shadow-floating smooth-transition">
+                <i class="ph ph-phone text-lg"></i>
+                +55 (11) 9999-9999
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-textMain text-2xl">
+            <i class="ph ph-list"></i>
+        </button>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto px-4 lg:px-8 space-y-6 lg:space-y-8 mt-2">
+
+        <!-- Hero Section -->
+        <section class="bg-cardBg rounded-3xl p-6 lg:p-12 shadow-soft border border-borderLight flex flex-col lg:flex-row items-center gap-10 lg:gap-16 relative overflow-hidden">
+            <!-- Background Decorative Blur -->
+            <div class="absolute -top-32 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start z-10">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-bodyBg border border-borderLight px-4 py-1.5 rounded-full text-xs font-bold text-textMuted tracking-wider mb-6">
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    CONFORTO • TECNOLOGIA • CUIDADO
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="font-serif text-4xl lg:text-5xl xl:text-6xl leading-[1.15] text-primary mb-6">
+                    Cuidado com o seu sorriso — <br class="hidden xl:block"/> sem estresse e sem pressa
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-textMuted text-lg mb-8 leading-relaxed max-w-lg">
+                    Odontologia estética, implantes, ortodontia e prevenção com a mais alta tecnologia e conforto absoluto para você.
+                </p>
+                
+                <!-- CTA & Tags -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full">
+                    <a href="#" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-3.5 rounded-full font-semibold hover:bg-primaryHover hover:shadow-floating smooth-transition group w-full sm:w-auto">
+                        <i class="ph ph-chat-circle-dots text-xl"></i>
+                        Agendar Avaliação 
+                        <i class="ph ph-arrow-right text-lg group-hover:translate-x-1 smooth-transition"></i>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-4 mt-8 text-sm text-textMuted font-medium">
+                    <div class="flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-secondary"></i> Atendimento Humanizado</div>
+                    <div class="flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-secondary"></i> Sem Dor</div>
+                    <div class="hidden sm:flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-secondary"></i> Diagnóstico 3D</div>
+                </div>
+            </div>
+            
+            <!-- Right Visual -->
+            <div class="w-full lg:w-1/2 h-64 sm:h-96 lg:h-[500px] rounded-2xl overflow-hidden relative shadow-inner">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Consultório odontológico moderno" class="w-full h-full object-cover object-center">
+            </div>
+        </section>
+
+        <!-- Trust & Metrics Bar -->
+        <section class="bg-cardBg rounded-3xl shadow-soft border border-borderLight p-6 lg:p-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x divide-slate-100">
+                <!-- Metric 1 -->
+                <div class="flex items-center gap-4 lg:px-6">
+                    <div class="w-12 h-12 rounded-full bg-bodyBg flex items-center justify-center text-primary shrink-0">
+                        <i class="ph ph-users text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-primary">5.000+</div>
+                        <div class="text-xs text-textMuted">Pacientes Atendidos</div>
+                    </div>
+                </div>
+                <!-- Metric 2 -->
+                <div class="flex items-center gap-4 lg:px-6">
+                    <div class="w-12 h-12 rounded-full bg-bodyBg flex items-center justify-center text-primary shrink-0">
+                        <i class="ph ph-shield-check text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-primary">12 Anos</div>
+                        <div class="text-xs text-textMuted">De Experiência</div>
+                    </div>
+                </div>
+                <!-- Metric 3 -->
+                <div class="flex items-center gap-4 lg:px-6">
+                    <div class="w-12 h-12 rounded-full bg-bodyBg flex items-center justify-center text-primary shrink-0">
+                        <i class="ph ph-cube text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-primary">Tomografia 3D</div>
+                        <div class="text-xs text-textMuted">Diagnóstico Preciso</div>
+                    </div>
+                </div>
+                <!-- Metric 4 -->
+                <div class="flex items-center gap-4 lg:px-6">
+                    <div class="w-12 h-12 rounded-full bg-bodyBg flex items-center justify-center text-primary shrink-0">
+                        <i class="ph ph-moon-stars text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-primary">Tratamento Sem Dor</div>
+                        <div class="text-xs text-textMuted">Anestesia Computadorizada</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="pt-8 pb-4">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+                <!-- Left Features -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <h2 class="font-serif text-3xl lg:text-4xl text-primary">Por que escolher a VistaDent</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Feature 1 -->
+                        <div class="flex gap-4 group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-borderLight flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white smooth-transition">
+                                <i class="ph ph-user-md text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-textMain mb-1">Especialistas Experientes</h3>
+                                <p class="text-sm text-textMuted leading-relaxed">Equipe médica multidisciplinar em constante atualização internacional para garantir os melhores resultados.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="flex gap-4 group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-borderLight flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white smooth-transition">
+                                <i class="ph ph-microscope text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-textMain mb-1">Tecnologia de Ponta</h3>
+                                <p class="text-sm text-textMuted leading-relaxed">Equipamentos modernos e digitais para diagnósticos rápidos e procedimentos seguros e indolores.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="flex gap-4 group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-borderLight flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white smooth-transition">
+                                <i class="ph ph-list-checks text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-textMain mb-1">Plano Personalizado</h3>
+                                <p class="text-sm text-textMuted leading-relaxed">Tratamentos desenhados sob medida e adaptados especificamente ao seu objetivo estético e orçamento.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="flex gap-4 group">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-sm border border-borderLight flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white smooth-transition">
+                                <i class="ph ph-heart text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-textMain mb-1">Ambiente Acolhedor</h3>
+                                <p class="text-sm text-textMuted leading-relaxed">Espaço aconchegante, calmante e projetado para eliminar qualquer medo de ir ao dentista.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="w-full lg:w-1/2">
+                    <div class="rounded-3xl overflow-hidden shadow-floating relative h-[400px] lg:h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Equipe VistaDent" class="w-full h-full object-cover">
+                        <!-- Floating Logo Watermark -->
+                        <div class="absolute top-6 right-6 glass-panel px-4 py-2 rounded-xl flex items-center gap-2">
+                            <i class="ph ph-tooth text-xl text-primary"></i>
+                            <span class="font-bold text-primary tracking-tight">VistaDent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section class="pt-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-4">
+                <h2 class="font-serif text-3xl lg:text-4xl text-primary">Tratamentos e Especialidades</h2>
+                <a href="#" class="text-sm font-semibold text-secondary hover:text-primary smooth-transition flex items-center gap-1 group">
+                    Ver todos os serviços <i class="ph ph-arrow-right group-hover:translate-x-1 smooth-transition"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-cardBg rounded-3xl p-4 shadow-soft border border-borderLight hover:shadow-floating smooth-transition group cursor-pointer flex flex-col">
+                    <div class="h-48 rounded-2xl overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Profilaxia" class="w-full h-full object-cover group-hover:scale-105 smooth-transition duration-500">
+                        <div class="absolute -bottom-4 left-4 w-10 h-10 bg-white rounded-xl shadow-md flex items-center justify-center text-secondary border border-borderLight z-10">
+                            <i class="ph ph-sparkle text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="pt-4 px-2 flex-grow flex flex-col">
+                        <h3 class="font-bold text-lg text-textMain mb-2">Profilaxia e Limpeza</h3>
+                        <p class="text-sm text-textMuted mb-4 flex-grow">Limpeza ultrassônica profunda para manter seus dentes e gengivas 100% saudáveis.</p>
+                        <div class="self-end w-8 h-8 rounded-full bg-bodyBg flex items-center justify-center text-textMuted group-hover:bg-primary group-hover:text-white smooth-transition">
+                            <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-cardBg rounded-3xl p-4 shadow-soft border border-borderLight hover:shadow-floating smooth-transition group cursor-pointer flex flex-col">
+                    <div class="h-48 rounded-2xl overflow-hidden mb-4 relative bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fea5f67ddc7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Implantes Dentários" class="w-full h-full object-cover group-hover:scale-105 smooth-transition duration-500">
+                        <div class="absolute -bottom-4 left-4 w-10 h-10 bg-white rounded-xl shadow-md flex items-center justify-center text-secondary border border-borderLight z-10">
+                            <i class="ph ph-screw text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="pt-4 px-2 flex-grow flex flex-col">
+                        <h3 class="font-bold text-lg text-textMain mb-2">Implantes Dentários</h3>
+                        <p class="text-sm text-textMuted mb-4 flex-grow">Reabilitação oral definitiva para recuperar sua mastigação e confiança ao sorrir.</p>
+                        <div class="self-end w-8 h-8 rounded-full bg-bodyBg flex items-center justify-center text-textMuted group-hover:bg-primary group-hover:text-white smooth-transition">
+                            <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-cardBg rounded-3xl p-4 shadow-soft border border-borderLight hover:shadow-floating smooth-transition group cursor-pointer flex flex-col">
+                    <div class="h-48 rounded-2xl overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1579728867385-d6c6e7fc55f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ortodontia" class="w-full h-full object-cover group-hover:scale-105 smooth-transition duration-500">
+                        <div class="absolute -bottom-4 left-4 w-10 h-10 bg-white rounded-xl shadow-md flex items-center justify-center text-secondary border border-borderLight z-10">
+                            <i class="ph ph-corners-out text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="pt-4 px-2 flex-grow flex flex-col">
+                        <h3 class="font-bold text-lg text-textMain mb-2">Ortodontia e Alinhadores</h3>
+                        <p class="text-sm text-textMuted mb-4 flex-grow">Alinhadores invisíveis e aparelhos modernos para um sorriso perfeitamente alinhado.</p>
+                        <div class="self-end w-8 h-8 rounded-full bg-bodyBg flex items-center justify-center text-textMuted group-hover:bg-primary group-hover:text-white smooth-transition">
+                            <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-cardBg rounded-3xl p-4 shadow-soft border border-borderLight hover:shadow-floating smooth-transition group cursor-pointer flex flex-col">
+                    <div class="h-48 rounded-2xl overflow-hidden mb-4 relative">
+                        <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Odontopediatria" class="w-full h-full object-cover group-hover:scale-105 smooth-transition duration-500">
+                        <div class="absolute -bottom-4 left-4 w-10 h-10 bg-white rounded-xl shadow-md flex items-center justify-center text-secondary border border-borderLight z-10">
+                            <i class="ph ph-baby text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="pt-4 px-2 flex-grow flex flex-col">
+                        <h3 class="font-bold text-lg text-textMain mb-2">Odontopediatria</h3>
+                        <p class="text-sm text-textMuted mb-4 flex-grow">Atendimento infantil lúdico, carinhoso e totalmente sem traumas para os pequenos.</p>
+                        <div class="self-end w-8 h-8 rounded-full bg-bodyBg flex items-center justify-center text-textMuted group-hover:bg-primary group-hover:text-white smooth-transition">
+                            <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Box Bottom -->
+        <section class="mt-8 mb-4 relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#E6F0FA] to-[#F1F6FB] shadow-soft border border-white p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <!-- Decorative BG elements -->
+            <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1584483786016-89c02e1c750e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; mix-blend-mode: luminosity;"></div>
+            
+            <div class="flex items-start lg:items-center gap-6 relative z-10 w-full lg:w-2/3">
+                <div class="hidden sm:flex w-16 h-16 rounded-2xl bg-white shadow-sm border border-borderLight items-center justify-center text-primary shrink-0">
+                    <i class="ph ph-calendar-check text-3xl"></i>
+                </div>
+                <div>
+                    <h2 class="font-serif text-2xl lg:text-3xl text-primary mb-2">Pronto para ter um sorriso saudável e bonito?</h2>
+                    <p class="text-textMuted text-sm lg:text-base">Agende sua primeira avaliação sem compromisso — vamos montar o melhor plano para você.</p>
+                </div>
+            </div>
+            
+            <div class="relative z-10 w-full lg:w-auto shrink-0">
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primaryHover shadow-lg hover:shadow-xl smooth-transition group w-full">
+                    Agendar Agora 
+                    <i class="ph ph-arrow-right text-lg group-hover:translate-x-1 smooth-transition"></i>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 lg:px-8 pt-12 pb-6 mt-8 border-t border-slate-200">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <i class="ph ph-tooth text-2xl text-secondary"></i>
+                <span class="font-bold text-lg text-primary">VistaDent</span>
+            </div>
+            <div class="text-sm text-textMuted text-center md:text-left">
+                &copy; 2026 VistaDent Odontologia Integrada. Todos os direitos reservados.
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-white border border-borderLight flex items-center justify-center text-textMuted hover:text-primary hover:border-primary smooth-transition"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white border border-borderLight flex items-center justify-center text-textMuted hover:text-primary hover:border-primary smooth-transition"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 smooth-transition z-50">
+        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+</body>
+</html>
